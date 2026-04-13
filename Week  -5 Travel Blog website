@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WanderWithMe</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">WanderWithMe</div>
+
+      <ul class="nav-links">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#stories" class="nav-link">Stories</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ================= HOME ================= -->
+  <section id="home" class="home">
+    <div class="hero-content">
+      <h1>Exploring the World, One Journey at a Time</h1>
+      <p>Join me as I share unforgettable adventures, hidden gems, and stories from around the globe.</p>
+      <a href="#stories" class="btn">Read My Stories</a>
+    </div>
+  </section>
+
+  <!-- ================= STORIES ================= -->
+  <section id="stories" class="stories section">
+    <h2>Travel Stories</h2>
+
+    <div class="cards">
+      <div class="card fade-in">
+        <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" alt="Mountain">
+        <h3>Mountain Adventure</h3>
+        <p>A thrilling trek through breathtaking peaks and misty trails.</p>
+        <button class="read-more" data-story="mountain">Read More</button>
+      </div>
+
+      <div class="card fade-in">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Beach">
+        <h3>Beach Escape</h3>
+        <p>Sunsets, waves, and serenity along tropical shores.</p>
+        <button class="read-more" data-story="beach">Read More</button>
+      </div>
+
+      <div class="card fade-in">
+        <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7" alt="City">
+        <h3>City Exploration</h3>
+        <p>Discovering culture, food, and vibrant city life.</p>
+        <button class="read-more" data-story="city">Read More</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ABOUT ================= -->
+  <section id="about" class="about section">
+    <h2>About Me</h2>
+    <div class="about-container fade-in">
+      <img src="https://i.pravatar.cc/200" alt="Traveller">
+      <p>
+        Hi, I’m a passionate traveler who believes every journey tells a story.
+        From mountain trails to bustling cities, I love capturing moments,
+        cultures, and experiences that inspire wanderlust.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section id="contact" class="contact section">
+    <h2>Contact Me</h2>
+
+    <form id="contactForm" class="fade-in">
+      <input type="text" id="name" placeholder="Your Name">
+      <input type="email" id="email" placeholder="Your Email">
+      <textarea id="message" placeholder="Your Message"></textarea>
+      <button type="submit" class="btn">Submit</button>
+      <p id="formMessage"></p>
+    </form>
+  </section>
+
+  <!-- ================= MODAL ================= -->
+  <div class="modal" id="storyModal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
