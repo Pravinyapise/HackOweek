@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hackathon Registration</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>⚡ Hackathon Registration</h1>
+  <p class="countdown" id="countdown"></p>
+
+  <form id="regForm">
+    <!-- STEP 1 -->
+    <div class="step active">
+      <h2>Step 1: Team Info</h2>
+
+      <label>Registration Type</label>
+      <select id="type">
+        <option value="solo">Solo</option>
+        <option value="team">Team</option>
+      </select>
+
+      <input type="text" id="teamName" placeholder="Team Name" required>
+
+      <button type="button" class="next">Next</button>
+    </div>
+
+    <!-- STEP 2 -->
+    <div class="step">
+      <h2>Step 2: Leader Details</h2>
+
+      <input type="text" placeholder="Leader Name" id="leaderName" required>
+      <input type="email" placeholder="Leader Email" id="leaderEmail" required>
+      <input type="tel" placeholder="Phone Number" id="leaderPhone" required>
+      <input type="text" placeholder="College Name" id="college" required>
+
+      <label>Tech Stack</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox" value="Web"> Web</label>
+        <label><input type="checkbox" value="AI"> AI</label>
+        <label><input type="checkbox" value="App"> App</label>
+        <label><input type="checkbox" value="Blockchain"> Blockchain</label>
+      </div>
+
+      <button type="button" class="prev">Back</button>
+      <button type="button" class="next">Next</button>
+    </div>
+
+    <!-- STEP 3 -->
+    <div class="step">
+      <h2>Step 3: Final</h2>
+
+      <input type="url" placeholder="GitHub Profile">
+      <input type="url" placeholder="LinkedIn Profile">
+
+      <label>
+        <input type="checkbox" id="agree" required>
+        I agree to the rules & guidelines
+      </label>
+
+      <div class="captcha">
+        <span id="capQ"></span>
+        <input type="number" id="capA" placeholder="Answer">
+      </div>
+
+      <button type="button" class="prev">Back</button>
+      <button type="submit">Register</button>
+    </div>
+  </form>
+
+  <div id="success" class="hidden">
+    <h2>✅ Registration Successful</h2>
+    <p id="teamId"></p>
+    <button onclick="downloadData()">Download Data (JSON)</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
